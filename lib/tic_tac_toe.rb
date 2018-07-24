@@ -125,6 +125,7 @@ end
 
 def play(board)
   result = false
+  turn_count(board)
   while turn_count(board) < 2
     turn(board)
     turn_count(board)
