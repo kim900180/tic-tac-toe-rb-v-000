@@ -22,10 +22,10 @@ def valid_move?(board, index)
 end
 
 def won?(board)
-  WIN_COMBINATIONS.detect do |combo|
-    board[combo[0]] == board[combo[1]] &&
-    board[combo[1]] == board[combo[2]] &&
-    position_taken?(board, combo[0])
+  WIN_COMBINATIONS.detect do |set|
+    board[set[0]] == board[set[1]] &&
+    board[set[1]] == board[set[2]] &&
+    position_taken?(board, set[0])
   end
 end
 
