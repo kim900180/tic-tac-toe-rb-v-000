@@ -126,14 +126,14 @@ end
 def play(board)
     result = false
     until over?(board)
-      turn_count(board)
-      if turn_count(board) < 4
-        turn_count(board)
+      turn_counter = turn_count(board) = 0
+      if turn_counter < 4
+        turn_counter += 1
         turn(board)
         over?(board)
         return false
-      elsif turn_count(board) > 3 && turn_count(board) < 10
-        turn_count(board)
+      elsif turn_counter > 3 && turn_count(board) < 10
+        turn_counter += 1
         turn(board)
         return over?(board)
       end
