@@ -138,6 +138,7 @@ def play(board)
       turn(board)
       turn_count(board)
       draw?(board)
+      over?(board)
     end
   end
 
