@@ -156,5 +156,7 @@ def play(board)
     puts "Congratulations #{winner(board)}!"
   elsif over?(board) && draw?(board)
     puts "Cats Game!"
+  else
+    return nil
   end
 end
