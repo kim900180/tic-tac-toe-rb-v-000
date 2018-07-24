@@ -139,8 +139,8 @@ def play(board)
       turn_count(board)
       draw?(board)
       result = over?(board)
-      return result
     end
+    return result
   end
 
   if over?(board) && winner(board)
