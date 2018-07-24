@@ -126,7 +126,7 @@ end
 def play(board)
   until over?(board)
     turn(board)
-    turn_count(board)
+    # turn_count(board)
     over?(board)
   end
 
