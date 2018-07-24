@@ -123,27 +123,38 @@ def winner(board)
   end
 end
 
-def play(board)
-  result = false
-  turn_count(board)
-  until over?(board)
-    if turn_count(board) < 4
-      turn_count(board)
-      turn(board)
-      over?(board)
-      return false
-    elsif turn_count(board) > 3 && turn_count(board) < 10
-      turn_count(board)
-      turn(board)
-      return over?(board)
-    end
-  end
+# def play(board)
+#   result = false
+#   turn_count(board)
+#   until over?(board)
+#     if turn_count(board) < 4
+#       turn_count(board)
+#       turn(board)
+#       over?(board)
+#       return false
+#     elsif turn_count(board) > 3 && turn_count(board) < 10
+#       turn_count(board)
+#       turn(board)
+#       return over?(board)
+#     end
+#   end
+# 
+#   if over?(board) && winner(board)
+#     puts "Congratulations #{winner(board)}!"
+#   elsif over?(board) && draw?(board)
+#     puts "Cat's Game!"
+#   else
+#     return nil
+#   end
+# end
 
-  if over?(board) && winner(board)
+def play(board)
+  while !over?(board)
+    turn(board)
+  end
+  if won?(board)
     puts "Congratulations #{winner(board)}!"
-  elsif over?(board) && draw?(board)
-    puts "Cat's Game!"
-  else
-    return nil
+  elsif draw?(board)
+    puts "Cats Game!"
   end
 end
