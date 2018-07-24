@@ -131,7 +131,7 @@ def play(board)
         turn_count(board)
         turn(board)
         draw?(board)
-        result = false
+        result false
       elsif turn_count(board) > 1
         turn_count(board)
         turn(board)
