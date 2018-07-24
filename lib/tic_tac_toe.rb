@@ -124,7 +124,7 @@ def winner(board)
 end
 
 def play(board)
-    until over?(board) == true
+    until over?(board)
       turn_count(board)
       if turn_count(board) < 3
         turn_count(board)
