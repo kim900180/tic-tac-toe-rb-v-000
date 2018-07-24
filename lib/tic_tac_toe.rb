@@ -127,14 +127,14 @@ def play(board)
     until over?(board)
       turn_count(board)
       if turn_count(board) < 2
-        turn(board)
         turn_count(board)
+        turn(board)
         draw?(board)
         over?(board)
         return false
       elsif
-        turn(board)
         turn_count(board)
+        turn(board)
         draw?(board)
         over?(board)
     end
