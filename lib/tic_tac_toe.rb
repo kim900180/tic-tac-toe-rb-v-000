@@ -130,7 +130,7 @@ def play(board)
     turn(board)
     turn_count(board)
     over?(board)
-    return result
+    return false
   end
   if turn_count(board) > 1
     until over?(board)
