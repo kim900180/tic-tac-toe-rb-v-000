@@ -124,17 +124,19 @@ def winner(board)
 end
 
 def play(board)
+    result = false
     until over?(board)
       turn_count(board)
       if turn_count(board) < 2
         turn_count(board)
         turn(board)
-        return false
+        return result
       elsif turn_count(board) > 1
         turn_count(board)
         turn(board)
-        over?(board)
+        result = over?(board)
     end
+    return result
   end
 
   if over?(board) && winner(board)
