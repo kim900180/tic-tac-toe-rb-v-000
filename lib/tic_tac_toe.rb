@@ -135,9 +135,9 @@ def play(board)
         turn_count(board)
         turn(board)
         result = over?(board)
+      end
+      return result
     end
-    return result
-  end
 
   if over?(board) && winner(board)
     puts "Congratulations #{winner(board)}!"
