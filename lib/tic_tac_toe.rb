@@ -129,6 +129,7 @@ def play(board)
     turn(board)
     turn_count(board)
     over?(board)
+    return false
   end
   if turn_count(board) > 2
     until over?(board)
