@@ -130,7 +130,7 @@ def play(board)
     turn_count(board)
     over?(board)
   end
-  while turn_count(board) > 2 && turn_count(board) < 9
+  if turn_count(board) > 2
     until over?(board)
       turn(board)
       turn_count(board)
