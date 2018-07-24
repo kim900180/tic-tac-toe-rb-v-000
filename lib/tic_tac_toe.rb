@@ -139,15 +139,15 @@ def play(board)
       turn_count(board)
       draw?(board)
       result = over?(board)
+      if over?(board) && winner(board)
+        puts "Congratulations #{winner(board)}!"
+      elsif over?(board) && draw?(board)
+        puts "Cat's Game!"
+      else
+        return nil
+      end
     end
-    return result
   end
 
-  if over?(board) && winner(board)
-    puts "Congratulations #{winner(board)}!"
-  elsif over?(board) && draw?(board)
-    puts "Cat's Game!"
-  else
-    return nil
-  end
+
 end
