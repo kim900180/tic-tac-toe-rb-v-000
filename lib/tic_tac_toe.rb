@@ -125,13 +125,13 @@ end
 
 def play(board)
   turn_count(board)
-  while turn_count(board) < 3
+  while turn_count(board) < 2
     turn(board)
     turn_count(board)
     over?(board)
     return false
   end
-  if turn_count(board) > 2
+  if turn_count(board) > 1
     until over?(board)
       turn(board)
       turn_count(board)
