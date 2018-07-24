@@ -138,7 +138,7 @@ end
 #       return over?(board)
 #     end
 #   end
-# 
+#
 #   if over?(board) && winner(board)
 #     puts "Congratulations #{winner(board)}!"
 #   elsif over?(board) && draw?(board)
