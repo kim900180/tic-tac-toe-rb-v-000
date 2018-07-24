@@ -124,21 +124,20 @@ def winner(board)
 end
 
 def play(board)
-    result = false
-    turn_count(board)
-    until over?(board)
-      
-      if turn_count(board) < 4
-        turn_count(board)
-        turn(board)
-        over?(board)
-        return false
-      elsif turn_count(board) > 3 && turn_count(board) < 10
-        turn_count(board)
-        turn(board)
-        return over?(board)
-      end
+  result = false
+  turn_count(board)
+  until over?(board)
+    if turn_count(board) < 4
+      turn_count(board)
+      turn(board)
+      over?(board)
+      return false
+    elsif turn_count(board) > 3 && turn_count(board) < 10
+      turn_count(board)
+      turn(board)
+      return over?(board)
     end
+  end
 
   if over?(board) && winner(board)
     puts "Congratulations #{winner(board)}!"
