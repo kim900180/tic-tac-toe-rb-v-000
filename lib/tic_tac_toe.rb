@@ -124,7 +124,7 @@ def winner(board)
 end
 
 def play(board)
-  until turn_count < 9 || over?(board)
+  until over?(board)
     turn(board)
     turn_count(board)
     over?(board)
