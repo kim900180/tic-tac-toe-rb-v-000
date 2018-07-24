@@ -130,7 +130,7 @@ def play(board)
       if turn_count(board) < 2
         turn_count(board)
         turn(board)
-        over?(board)
+        draw?(board)
         result = false
       elsif turn_count(board) > 1
         turn_count(board)
