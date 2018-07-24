@@ -132,7 +132,7 @@ def play(board)
         turn(board)
         over?(board)
         return false
-      elsif turn_count(board) > 2
+      elsif turn_count(board) > 2 && turn_count(board) < 10
         turn_count(board)
         turn(board)
         return over?(board)
